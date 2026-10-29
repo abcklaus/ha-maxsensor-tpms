@@ -1,0 +1,90 @@
+{
+  "domain": "maxsensor_tpms",
+  "name": "MaxSensor TPMS",
+  "bluetooth": [
+    {
+      "manufacturer_id": 76,
+      "manufacturer_data_start": [
+        2,
+        21,
+        181,
+        74,
+        220,
+        0,
+        103,
+        249,
+        17,
+        217,
+        150,
+        105,
+        8,
+        0,
+        32,
+        12,
+        154,
+        102
+      ],
+      "connectable": false
+    },
+    {
+      "manufacturer_id": 76,
+      "manufacturer_data_start": [
+        2,
+        21,
+        181,
+        74,
+        220,
+        0,
+        103,
+        249,
+        17,
+        217,
+        150,
+        105,
+        8,
+        0,
+        32,
+        12,
+        154,
+        103
+      ],
+      "connectable": false
+    },
+    {
+      "manufacturer_id": 76,
+      "manufacturer_data_start": [
+        2,
+        21,
+        181,
+        74,
+        220,
+        0,
+        103,
+        249,
+        17,
+        217,
+        150,
+        105,
+        8,
+        0,
+        32,
+        12,
+        154,
+        106
+      ],
+      "connectable": false
+    }
+  ],
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": [
+    "bluetooth_adapters"
+  ],
+  "documentation": "https://github.com/abcklaus/ha-maxsensor-tpms",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/abcklaus/ha-maxsensor-tpms/issues",
+  "requirements": [],
+  "version": "0.2.0",
+  "single_config_entry": true
+}

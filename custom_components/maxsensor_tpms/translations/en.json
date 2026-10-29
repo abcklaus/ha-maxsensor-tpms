@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up MaxSensor TPMS",
+        "description": "Home Assistant will now listen permanently for tire pressure sensors (Multi Wheel BLE TPMS) and add new sensors automatically. Continue?"
+      }
+    },
+    "abort": {
+      "already_configured": "MaxSensor TPMS is already set up.",
+      "single_instance_allowed": "MaxSensor TPMS is already set up.",
+      "not_supported": "This is not a supported TPMS sensor."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MaxSensor TPMS – Settings",
+        "description": "Sensor IDs are 5 characters (as shown in the Multi Wheel app); separate multiple IDs with commas.",
+        "data": {
+          "auto_add": "Add new sensors automatically",
+          "min_rssi": "Minimum signal strength for new sensors (dBm, empty = off)",
+          "manual_ids": "Pre-create sensor IDs manually",
+          "ignored_ids": "Ignored sensor IDs"
+        },
+        "data_description": {
+          "min_rssi": "Keeps vehicles in the neighborhood out, e.g. -80. Applies to new sensors only.",
+          "manual_ids": "Creates devices before the sensor transmits for the first time.",
+          "ignored_ids": "These sensors are never added. Deleted devices end up here automatically."
+        }
+      }
+    },
+    "error": { "invalid_sensor_id": "Invalid sensor ID. Expected 5 hex characters, e.g. 01A2B." }
+  },
+  "entity": {
+    "sensor": { "last_seen": { "name": "Last seen" } }
+  }
+}

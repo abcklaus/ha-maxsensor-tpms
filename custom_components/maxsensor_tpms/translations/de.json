@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "MaxSensor TPMS einrichten",
+        "description": "Home Assistant lauscht ab jetzt dauerhaft auf Reifendrucksensoren (Multi Wheel BLE TPMS) und legt neue Sensoren automatisch an. Fortfahren?"
+      }
+    },
+    "abort": {
+      "already_configured": "MaxSensor TPMS ist bereits eingerichtet.",
+      "single_instance_allowed": "MaxSensor TPMS ist bereits eingerichtet.",
+      "not_supported": "Dies ist kein unterstützter TPMS-Sensor."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MaxSensor TPMS – Einstellungen",
+        "description": "Sensor-IDs sind 5 Zeichen lang (wie in der Multi-Wheel-App), mehrere durch Komma trennen.",
+        "data": {
+          "auto_add": "Neue Sensoren automatisch hinzufügen",
+          "min_rssi": "Mindest-Signalstärke für neue Sensoren (dBm, leer = aus)",
+          "manual_ids": "Sensor-IDs manuell vorab anlegen",
+          "ignored_ids": "Ignorierte Sensor-IDs"
+        },
+        "data_description": {
+          "min_rssi": "Verhindert, dass Fahrzeuge in der Nachbarschaft erfasst werden, z. B. -80. Gilt nur für neue Sensoren.",
+          "manual_ids": "Legt Geräte schon an, bevor der Sensor zum ersten Mal sendet.",
+          "ignored_ids": "Diese Sensoren werden nie hinzugefügt. Gelöschte Geräte landen automatisch hier."
+        }
+      }
+    },
+    "error": { "invalid_sensor_id": "Ungültige Sensor-ID. Erwartet werden 5 Hex-Zeichen, z. B. 01A2B." }
+  },
+  "entity": {
+    "sensor": { "last_seen": { "name": "Zuletzt gesehen" } }
+  }
+}
